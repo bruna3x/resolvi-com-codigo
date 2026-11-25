@@ -155,6 +155,13 @@ A página pública do Lattes pede um captcha antes de mostrar o currículo, e o 
 5. Escolha a aba do currículo, não a do captcha, e dê um nome ao arquivo.
 6. Abra com `start nome.pdf`.
 
+## Para ir além
+
+<aside class="indicacao">
+  <p class="indicacao-aviso">Indicação com link de afiliado: se você comprar por ele, eu recebo uma comissão, sem custo extra para você.</p>
+  <p><strong><a href="https://www.amazon.com.br/dp/B0FLF3FPYR?linkCode=ll2&amp;tag=livros3x-20&amp;linkId=0246f8bda3bc86abbafd4a866fe79ac7&amp;ref_=as_li_ss_tl" rel="sponsored nofollow noopener" target="_blank">Automatize Tarefas Maçantes com Python</a></strong>, de Al Sweigart. Ensina Python a quem não é programador, por meio de pequenos projetos de automação: renomear arquivos em lote, preencher planilhas, extrair dados de páginas. É a mesma lógica das receitas deste site, em formato de livro.</p>
+</aside>
+
 ## Conceitos desta receita
 
 - **Script:** arquivo de texto com instruções que o Python executa de cima para baixo.

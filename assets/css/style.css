@@ -191,6 +191,17 @@ div.highlighter-rouge code { font-family: inherit; }
 }
 .texto blockquote p:last-child { margin-bottom: 0; }
 
+/* Indicação com link de afiliado: sempre identificada */
+.indicacao {
+  margin: 0 0 1.5rem; padding: 1rem 1.1rem;
+  border: 1px solid var(--linha); border-left: 4px solid var(--verde);
+  background: #fff;
+}
+.indicacao p { margin: 0; }
+.indicacao .indicacao-aviso {
+  font-size: 0.82rem; color: var(--tinta-suave); margin-bottom: 0.6rem;
+}
+
 .voltar { margin-top: 3rem; }
 
 @media (max-width: 480px) {
