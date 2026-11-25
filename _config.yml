@@ -11,11 +11,20 @@ lang: pt-BR
 baseurl: "/resolvi-com-codigo"
 url: "https://bruna3x.github.io"
 
+# ── Medição (preencha quando tiver os códigos) ────────────────────
+# Contador de visitas: o "código" escolhido ao criar a conta no GoatCounter.
+# Exemplo: se o painel for https://resolvi.goatcounter.com, escreva "resolvi".
+goatcounter: ""
+# Google Search Console: o valor de content="..." da tag de verificação.
+google_site_verification: ""
+
 # ── Funcionamento (não precisa mexer) ─────────────────────────────
 markdown: kramdown
 kramdown:
   input: GFM
 highlighter: rouge
+plugins:
+  - jekyll-sitemap
 permalink: /receitas/:title/
 future: true   # publica mesmo que a data do post ainda não tenha chegado
 exclude:
