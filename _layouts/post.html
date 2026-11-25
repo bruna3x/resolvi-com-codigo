@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="receita">
+  <header class="receita-topo">
+    <h1>{{ page.title }}</h1>
+    {% if page.resumo %}<p class="resumo">{{ page.resumo }}</p>{% endif %}
+    <dl class="ficha">
+      {% if page.ferramentas %}<div><dt>Ferramentas</dt><dd>{{ page.ferramentas | join: ", " }}</dd></div>{% endif %}
+      {% if page.sistema %}<div><dt>Sistema</dt><dd>{{ page.sistema }}</dd></div>{% endif %}
+      {% if page.nivel %}<div><dt>Para quem</dt><dd>{{ page.nivel }}</dd></div>{% endif %}
+      <div><dt>Publicado em</dt><dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d/%m/%Y" }}</time></dd></div>
+    </dl>
+  </header>
+  <div class="texto">
+    {{ content }}
+  </div>
+  <p class="voltar"><a href="{{ '/' | relative_url }}">Ver todas as receitas</a></p>
+</article>

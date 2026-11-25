@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section class="abertura">
+  <h1>Problemas reais, resolvidos com código, explicados para quem não programa.</h1>
+  <p>Cada receita parte de algo que eu precisava fazer e não conseguia do jeito comum. Você copia, cola e muda só o que está indicado. Sem curso, sem pré-requisito.</p>
+</section>
+
+<section aria-labelledby="lista-titulo">
+  <h2 id="lista-titulo" class="lista-titulo">Receitas</h2>
+  <ol class="lista" reversed>
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.resumo }}</p>
+        <p class="meta">{{ post.ferramentas | join: ", " }}{% if post.sistema %}, no {{ post.sistema }}{% endif %}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

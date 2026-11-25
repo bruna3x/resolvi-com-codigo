@@ -1,0 +1,23 @@
+# ── Identidade do site (pode mudar à vontade) ─────────────────────
+title: "Resolvi com código"
+subtitulo: "Programação para não programadores"
+description: "Problemas reais resolvidos com código, explicados passo a passo para quem não programa."
+author: "Bruna"
+lang: pt-BR
+
+# ── Endereço ──────────────────────────────────────────────────────
+# baseurl precisa ser "/" + o nome exato do repositório no GitHub.
+# Se o repositório se chamar outra coisa, troque aqui também.
+baseurl: "/resolvi-com-codigo"
+url: "https://bruna3x.github.io"
+
+# ── Funcionamento (não precisa mexer) ─────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /receitas/:title/
+future: true   # publica mesmo que a data do post ainda não tenha chegado
+exclude:
+  - README.md
+  - scripts

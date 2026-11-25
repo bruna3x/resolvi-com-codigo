@@ -1,0 +1,201 @@
+/* Resolvi com código — folha de estilo
+   Cores e fontes ficam nas variáveis abaixo: mudar aqui muda o site inteiro. */
+:root {
+  --papel: #f2f5f3;
+  --tinta: #14213d;
+  --tinta-suave: #4a556b;
+  --linha: #cfd8d3;
+  --verde: #0b6e4f;        /* cor de link: o "Pronto" do terminal */
+  --marca-texto: #ffdf5e;  /* destaque de marca-texto */
+  --terminal: #101a30;
+  --terminal-texto: #e6ecf5;
+
+  --titulo: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --corpo: "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+
+  --coluna: 42rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 112.5%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--corpo);
+  line-height: 1.6;
+}
+
+a { color: var(--verde); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--verde); outline-offset: 3px; }
+
+.pular {
+  position: absolute; left: -999px; top: 0;
+  background: var(--tinta); color: var(--papel); padding: 0.5rem 1rem;
+}
+.pular:focus { left: 0; }
+
+/* ── Topo e rodapé ─────────────────────────────────────────────── */
+.topo, main, .rodape {
+  max-width: var(--coluna);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.topo {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+  align-items: baseline; justify-content: space-between;
+  padding-block: 1.5rem;
+}
+.marca {
+  font-family: var(--titulo); font-weight: 700; font-size: 1.15rem;
+  color: var(--tinta); text-decoration: none;
+  background: linear-gradient(transparent 58%, var(--marca-texto) 58%);
+  padding-inline: 0.15em;
+}
+.topo nav { display: flex; gap: 1.25rem; }
+.topo nav a { color: var(--tinta); }
+
+.rodape {
+  margin-top: 5rem; padding-block: 2rem 3rem;
+  border-top: 1px solid var(--linha);
+  color: var(--tinta-suave); font-size: 0.85rem;
+}
+.rodape p { margin: 0 0 0.35rem; }
+
+/* ── Página inicial ────────────────────────────────────────────── */
+.abertura { padding-block: 3rem 2.5rem; }
+.abertura h1 {
+  font-family: var(--titulo); font-weight: 700;
+  font-size: clamp(2rem, 6.5vw, 3.1rem);
+  line-height: 1.08; letter-spacing: -0.02em;
+  margin: 0 0 1.25rem; text-wrap: balance;
+}
+.abertura p { font-size: 1.1rem; color: var(--tinta-suave); margin: 0; max-width: 34rem; }
+
+.lista-titulo {
+  font-family: var(--titulo); font-size: 1rem; font-weight: 500;
+  color: var(--tinta-suave); margin: 0 0 0.25rem;
+}
+.lista { list-style: none; margin: 0; padding: 0; }
+.lista li { border-top: 1px solid var(--linha); }
+.lista li:last-child { border-bottom: 1px solid var(--linha); }
+.lista a {
+  display: block; padding: 1.4rem 0; color: inherit; text-decoration: none;
+}
+.lista h3 {
+  font-family: var(--titulo); font-weight: 700; font-size: 1.45rem;
+  line-height: 1.2; margin: 0 0 0.4rem; text-wrap: balance;
+}
+.lista a:hover h3 { background: linear-gradient(transparent 62%, var(--marca-texto) 62%); display: inline; }
+.lista p { margin: 0 0 0.4rem; color: var(--tinta-suave); }
+.lista .meta { font-size: 0.85rem; margin: 0; color: var(--verde); }
+
+/* ── Receita ───────────────────────────────────────────────────── */
+.receita-topo { padding-block: 2.5rem 0.5rem; }
+.receita-topo h1 {
+  font-family: var(--titulo); font-weight: 700;
+  font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+  line-height: 1.1; letter-spacing: -0.02em;
+  margin: 0 0 1rem; text-wrap: balance;
+}
+.resumo { font-size: 1.15rem; color: var(--tinta-suave); margin: 0 0 1.5rem; }
+
+.ficha {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.9rem 1.5rem; margin: 0; padding: 1rem 0;
+  border-block: 1px solid var(--linha); font-size: 0.9rem;
+}
+.ficha dt { color: var(--tinta-suave); }
+.ficha dd { margin: 0; font-weight: 700; }
+
+.texto { margin-top: 2rem; }
+.texto h2 {
+  font-family: var(--titulo); font-weight: 700; font-size: 1.6rem;
+  line-height: 1.2; margin: 3rem 0 0.75rem;
+}
+.texto h3 {
+  font-family: var(--titulo); font-weight: 700; font-size: 1.15rem;
+  margin: 2rem 0 0.5rem;
+}
+.texto p, .texto ul, .texto ol { margin: 0 0 1.1rem; }
+.texto li { margin-bottom: 0.35rem; }
+.texto strong { font-weight: 700; }
+
+/* Código no meio do texto: riscado de marca-texto, porque é o que a pessoa vai digitar */
+.texto :not(pre) > code {
+  font-family: var(--mono); font-size: 0.86em;
+  background: linear-gradient(transparent 12%, var(--marca-texto) 12%, var(--marca-texto) 90%, transparent 90%);
+  padding: 0 0.2em; overflow-wrap: anywhere;
+}
+
+/* Blocos de código: a etiqueta diz ONDE aquilo vai */
+div.highlighter-rouge {
+  position: relative; margin: 0 0 1.4rem;
+  background: var(--terminal); border-radius: 6px; overflow: hidden;
+}
+div.highlighter-rouge::before {
+  display: block; padding: 0.5rem 5.5rem 0.5rem 1rem;
+  font-family: var(--corpo); font-size: 0.8rem;
+  color: #a9b6cc; border-bottom: 1px solid #26324d;
+  content: "Código";
+}
+div.language-powershell::before { content: "Digite no PowerShell"; }
+div.language-python::before { content: "Conteúdo do arquivo .py"; }
+div.language-css::before { content: "Regra de CSS"; }
+div.language-plaintext::before, div.language-text::before { content: "O que aparece na tela"; }
+
+div.highlighter-rouge pre {
+  margin: 0; padding: 1rem; overflow-x: auto;
+  font-family: var(--mono); font-size: 0.8rem; line-height: 1.6;
+  color: var(--terminal-texto); tab-size: 4;
+}
+div.highlighter-rouge code { font-family: inherit; }
+
+.copiar {
+  position: absolute; top: 0.3rem; right: 0.4rem;
+  font: inherit; font-size: 0.78rem; cursor: pointer;
+  color: var(--terminal-texto); background: #26324d;
+  border: 0; border-radius: 4px; padding: 0.2rem 0.65rem;
+}
+.copiar:hover { background: #34446a; }
+
+/* Cores do código (classes geradas pelo Rouge) */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .sd { color: #8794ad; font-style: italic; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sh { color: #ffdf5e; }
+.highlight .k, .highlight .kn, .highlight .kd, .highlight .ow { color: #8fc7ff; }
+.highlight .nb, .highlight .nf, .highlight .nc { color: #7fe0b8; }
+.highlight .mi, .highlight .mf, .highlight .kc { color: #ffb38a; }
+
+/* Tabelas */
+.texto table {
+  width: 100%; border-collapse: collapse; margin: 0 0 1.5rem;
+  font-size: 0.9rem; display: block; overflow-x: auto;
+}
+.texto th {
+  text-align: left; font-weight: 700; padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 2px solid var(--tinta); white-space: nowrap;
+}
+.texto td {
+  padding: 0.6rem 0.75rem 0.6rem 0; vertical-align: top;
+  border-bottom: 1px solid var(--linha);
+}
+
+.texto blockquote {
+  margin: 0 0 1.4rem; padding: 0.9rem 1.1rem;
+  border-left: 4px solid var(--marca-texto); background: #e8ede9;
+}
+.texto blockquote p:last-child { margin-bottom: 0; }
+
+.voltar { margin-top: 3rem; }
+
+@media (max-width: 480px) {
+  html { font-size: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
