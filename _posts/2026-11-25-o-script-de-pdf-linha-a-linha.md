@@ -8,7 +8,7 @@ sistema: Windows
 nivel: "Quem já rodou a receita e quer entender"
 ---
 
-Na receita [Como salvar qualquer página web em PDF]({% post_url 2026-11-25-salvar-pagina-web-em-pdf %}) o programa é só copiado e colado. Aqui ele é desmontado: o que cada linha faz, o que cada símbolo significa e até onde dá para mexer.
+Na receita [Como salvar qualquer página web em PDF]({{ '/receitas/salvar-pagina-web-em-pdf/' | relative_url }}) o programa é só copiado e colado. Aqui ele é desmontado: o que cada linha faz, o que cada símbolo significa e até onde dá para mexer.
 
 ## As três peças
 

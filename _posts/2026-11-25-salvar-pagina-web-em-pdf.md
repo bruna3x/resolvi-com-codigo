@@ -203,4 +203,4 @@ Cole o código do programa, salve e feche.
    start nome.pdf
    ```
 
-Quer entender o que cada linha do programa faz? Veja [o script explicado linha a linha]({% post_url 2026-11-25-o-script-de-pdf-linha-a-linha %}).
+Quer entender o que cada linha do programa faz? Veja [o script explicado linha a linha]({{ '/receitas/o-script-de-pdf-linha-a-linha/' | relative_url }}).
