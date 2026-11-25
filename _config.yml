@@ -14,9 +14,9 @@ url: "https://bruna3x.github.io"
 # ── Medição (preencha quando tiver os códigos) ────────────────────
 # Contador de visitas: o "código" escolhido ao criar a conta no GoatCounter.
 # Exemplo: se o painel for https://resolvi.goatcounter.com, escreva "resolvi".
-goatcounter: ""
+goatcounter: "resolvi"
 # Google Search Console: o valor de content="..." da tag de verificação.
-google_site_verification: ""
+google_site_verification: "GWOrm3s0_u7PhNgQlhz6GeQH7BFDtXA7m5666pc2Fls"
 
 # ── Funcionamento (não precisa mexer) ─────────────────────────────
 markdown: kramdown
